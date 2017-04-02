@@ -3,6 +3,7 @@
  */
 var Note = require("mod/note.js").Note;
 var Toast = require("mod/toast.js").Toast;
+var Waterfall = require("mod/waterfall.js");
 var NoteMan = (function () {
     function load(){
         $.get("/api/notes")
@@ -13,7 +14,8 @@ var NoteMan = (function () {
                             id:content.id,
                             content:content.content
                         })
-                    })
+                    });
+                    Waterfall.init($("#content"))
                 }else{
                     Toast(ret.errorMsg);
                 }

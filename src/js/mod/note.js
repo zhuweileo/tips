@@ -38,6 +38,10 @@ Note.prototype={
         var color = this.colors[Math.floor(Math.random()*6)];
         this.$note.find(".note-head").css("background",color[0]);
         this.$note.find(".note-ct").css("background",color[1]);
+        this.$note.css({
+            left:"20px",
+            top:"500px"
+        });
         this.opts.$ct.append(this.$note);
     },
     bindEvent:function(){
