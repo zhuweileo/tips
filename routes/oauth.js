@@ -23,14 +23,14 @@ passport.use(new JirenguStrategy({
         clientID: '5c4e7ab974a050290995fa279d949a6e8540995e28e3b5ff04cf19d23f90c513',
         tokenURL: 'http://user.jirengu.com/oauth/token',
         clientSecret: 'aaeaab099520704c3a1998da9c8fdc26e02ba7dd252b1ce70b4c6f6a45cd7f5d',
-        callbackURL: "http://zhuweileo.top/oauth/jirengu/callback"},
+        callbackURL: "http://zhuweileo.top:4321/oauth/jirengu/callback"},
     function(accessToken, refreshToken, profile, done) {
         done(null, profile)
     }));
 passport.use(new GitHubStrategy({
         clientID: "64b86470449af0dcd476",
         clientSecret:"0381188a91a3b1128e730c2e990962ae151fd11d",
-        callbackURL: "http://zhuweileo.top/oauth/github/callback"
+        callbackURL: "http://zhuweileo.top:4321/oauth/github/callback"
     },
     function(accessToken, refreshToken, profile, cb) {
         // User.findOrCreate({ githubId: profile.id }, function (err, user) {
